@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fotografia Fischer</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/Base.css') }}">
+        <script src="{{ url_for('static', filename='base.js') }}"></script>
+        <link rel="shortcut icon" href="/static/Imagens/logo.ico" type="image/x-icon">
+    {% block head %}
+    {% endblock %}
+    </head>
+    <body>
+        <header class="cabeca Cabecalho1">
+            <div class="logo"><img id="Logo" src="/static/Imagens/Logo.png" alt=""></div>
+            <div class="Links">
+                <a href="" class="links link1" id="Home"> <span>Home</span><div></div></a>
+                <a href="#Sobre" class="links cor link2 "> <span>Sobre Mim</span><div></div></a>
+                <a href="" class="links cor link3"> <span>Galeria de Fotos</span><div></div></a>
+                <a href="" class="links cor link4"> <span>Depoimentos</span><div></div></a>
+                <a href="" class="links cor link5"><span>Contato</span><div></div></a>
+            </div>
+        </header>
+        <div class="Carrossel">
+                <input type="radio" name="chec" id="check1" class="checks" checked>
+                <input type="radio" name="chec" id="check2" class="checks">
+                <input type="radio" name="chec" id="check3" class="checks">
+                <input type="radio" name="chec" id="check4" class="checks">
+            <div class="Slides">
+                <div class="Slide Ativo" id="Mover"><img style="object-position: 0 0%;" src="/static/Imagens/img2.jpg" alt=""></div>
+                <div class="Slide"><img style=" object-position: 0 27% ;" src="/static/Imagens/img3.jpg" alt=""></div>
+                <div class="Slide"><img style="object-position: bottom;" src="/static/Imagens/img4.jpg" alt=""></div>
+                <div class="Slide"><img style="object-position: 0 22%;" src="/static/Imagens/img1.jpg" alt=""></div>
+               
+            </div>
+            <div class="Navegacao">
+                <label for="check1" id="label1" class="labe" ></label>
+                <label for="check2" id="label2" class="labe"></label>
+                <label for="check3" id="label3" class="labe"></label>
+                <label for="check4" id="label4" class="labe"></label>
+            </div>
+        </div>
+        <div class="texto">
+                <strong>Eternize seus momentos</strong>
+                <h1>Fotográfo Profissional</h1>
+                <p>Rodrigo Fischer, o olhar que eterniza momentos no Rio de Janeiro, capturando a essência de empresas, festas, casamentos, shows, colégios entre outros.</p>
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=5521984415565&text=Olá, tudo bem? Gostaria de solicitar um orçamento!" class="orcamento">Solicite Orçamento</a>
+        </div>
+        
+        <div id="Sobre"></div>
+
+        <section class="sobreMim">
+            <div class="esquerdo">
+                <h3>Imagens que sussurram histórias.</h3>
+                <strong>
+                    Fotógrafo Profissional para Empresas, Retratos, Festas entre outras ocasiões.
+                </strong>
+                <p>Rodrigo Fischer, fotógrafo carioca, revolucionando a arte de eternizar momentos no Rio de Janeiro. Com apenas 1 ano e meio de trajetória, ele imprime sua marca única em eventos e shows.</p> 
+                <p>Realizo eventos corporativos, fotos institucionais, retratos profissionais entre outras, combino criatividade e técnica apurada para criar imagens impactantes, seja em seu estúdio acolhedor ou atendendo demandas personalizadas, ofereço um atendimento motivado, único e pontual.</p>
+                <p>Cada foto escolhida pelo cliente é tratada com cuidado, resultando em um trabalho exclusivo e de qualidade que captura a essência singular de cada momento.</p>
+            </div>
+            <div class="direito">
+                <img id="sobre1" src="/static/Imagens/Sobre2.jpg" alt="">
+                <img id="sobre2" src="/static/Imagens/Sobre.jpg" alt="">
+            </div>
+        </section>
+        <footer>
+            <div class="icones"><a target="_blank" href="https://www.instagram.com/fischerfotografia23?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram </a>|<a  target="_blank" href="https://api.whatsapp.com/send/?phone=5521984415565&text=Olá, tudo bem? Gostaria de solicitar um orçamento!">  Whatsapp  </a>|<a  target="_blank" href="https://www.facebook.com/profile.php?id=100003683362557&ref=xav_ig_profile_web"> Facebook</a></div>
+            <div class="LogoRodape"><img src="/static/Imagens/Logo.png" alt=""></div>
+            <div class="infos">
+            <p> +55 (21) 9 8441-5565 </p> <p>Seuemail@gmail.com.br </p>
+<p> São João de Meriti, Rio de Janeiro</p>
+               <p> Seg a Sex: 09h às 19h e Sábado das 09h às 13h</p></div>
+            <div class="Desenvolvedor"> <p>Desenvolvido por Carlos Inarra</p></div>
+        </footer>
+        {% block body %}   
+        {% endblock %}
+    </body>
+</html>
