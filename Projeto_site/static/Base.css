@@ -123,7 +123,7 @@ body{
 }
 
 .Links{
-    margin: 0 10vw 0 0 ;
+    margin: 0 15vw 0 0 ;
     display: flex;
     flex-direction: row;
 }
@@ -141,7 +141,7 @@ body{
 }
 
 .logo{
-    margin-left: 3vw;
+    margin-left: 5vw;
 }
 
 
@@ -254,8 +254,8 @@ body{
 
 .sobreMim{
     position: absolute;
-    margin-top: 110vh;
-    height: 80vh;
+    margin-top: 120vh;
+    max-height: 80vh;
     width: 100vw;
     margin-left: -10px;
     background-color: #ffffff;
@@ -337,23 +337,26 @@ footer{
     background-color: #151515;
 
     & .LogoRodape{
-        margin-top: 2vh;
+        height: 100%;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        z-index: 901;
     }
 
     & div img{
         height: auto;
-        width: 22%;
+        width: 18%;
         margin-bottom: 3vh;
     }
 
     & .infos{
+        z-index: 902;
         position: absolute;
-        width: 20%;
-        right: 2vw;
+        width: auto;
+        right: 10vw;
         height: 80%;
         display: flex;
         flex-direction: column;
@@ -371,24 +374,23 @@ footer{
     & .Desenvolvedor{
         background-color: #0e0e0e;
         width: 100vw;
-        position: absolute;
-        bottom: 0;
-        height: 20%;
-        color: #ffffff;
-        font-size: small;
+        position: absolute; 
+        height: 40px;
+        color: hsl(0, 0%, 100%);
+        font-size: x-small;
         display: flex;
+        flex-direction: column;
         font-weight: 600;
-        justify-content: center;
-        align-items: center;
-
-        & p{
-            margin-bottom: 2vh;
-        }
+        justify-content: flex-start;
+        align-items:center;
+        text-align: center;
+        bottom: 0;
     }
 
 }
 
 .icones{
+    z-index: 903;
     position: absolute;
     left: 10vw;
     justify-content: space-between;
@@ -404,4 +406,172 @@ footer{
 
 .icones a:hover{
     color: #9f040e;
+}
+
+@media screen and (max-width: 1500px) { 
+.infos{
+    margin-bottom: 3vh;
+}
+
+    .esquerdo p{
+        font-size: medium;
+    }
+
+    footer p{
+        font-size: small;
+
+    }
+}
+
+@media screen and (max-width: 1100px) { 
+    .esquerdo p{
+        font-size: medium;
+    }
+
+    .esquerdo strong{
+        font-size: large;
+    }
+
+
+    footer p{
+        font-size: x-small;
+
+    }
+
+    .direito #sobre1{
+        top: 15vh;
+    }
+    .direito #sobre2{
+        top: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 880px) { 
+
+    .texto strong{
+        font-size: medium;
+    }
+
+    .texto h1{
+        font-size: larger;
+    }
+
+    .texto{
+        width: 80vw;
+
+        & a{
+            font-size: small;
+            width: 20vw;
+        }
+    }
+
+    .texto p{
+        font-size: large;
+    }
+   
+
+.esquerdo{
+    margin-left: 10vw;
+}
+
+.direito #sobre1{
+    width: 25vw;
+    top: 42vh;
+
+}
+.direito #sobre2{
+    width: 35vw;
+    
+}
+
+section.sobreMim p{
+    font-size: small;
+   
+}
+
+section.sobreMim{
+    margin-top: 100vh;
+}
+
+    footer p{
+        font-size:xx-small;
+
+    }
+
+    footer .icones{
+        font-size: xx-small;
+    }
+
+    footer .LogoRodape{
+        display: none;
+    }
+
+    .logo img{
+        width: 15vw;
+        margin-left: 5vw;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) { 
+
+    .Cabecalho1{
+        height: 10vh;
+    }
+
+    .Cabecalho2{
+        height: 10vh;
+    }
+
+    .Links{
+        margin: 0 1vw 0 0;
+    }
+
+    .Links a{
+        font-size: xx-small;
+    }
+
+    .texto{
+        height: 30vh;
+        width: 60vw;
+        display: flex;
+
+        & strong,p{
+            font-size: xx-small;
+        }
+
+        & a{
+            width: 30vw;
+            height: 5vh;
+            font-size: x-small;
+        }
+    }
+
+    section.sobreMim p,h3{
+        font-size: 45%;
+    }
+
+    section.sobreMim strong{
+        font-size: 60%;
+    }
+
+    .direito #sobre1{
+        width: 40vw;
+        top: 35vh;
+        right: 0.2vw;
+        border-radius: 10px;
+    }
+
+    footer p{
+        font-size:45%;
+
+    }
+
+    footer .icones{
+        font-size: xx-small;
+    }
+
+    
 }

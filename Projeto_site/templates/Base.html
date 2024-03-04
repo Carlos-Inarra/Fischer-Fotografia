@@ -2,10 +2,12 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fotografia Fischer</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='/Base.css') }}">
+        <link rel="stylesheet" href="/static/Base.css">
         <script src="{{ url_for('static', filename='base.js') }}"></script>
         <link rel="shortcut icon" href="/static/Imagens/logo.ico" type="image/x-icon">
+        
     {% block head %}
     {% endblock %}
     </head>
@@ -15,7 +17,6 @@
             <div class="Links">
                 <a href="" class="links link1" id="Home"> <span>Home</span><div></div></a>
                 <a href="#Sobre" class="links cor link2 "> <span>Sobre Mim</span><div></div></a>
-                <a href="" class="links cor link3"> <span>Galeria de Fotos</span><div></div></a>
                 <a href="" class="links cor link4"> <span>Depoimentos</span><div></div></a>
                 <a href="" class="links cor link5"><span>Contato</span><div></div></a>
             </div>
