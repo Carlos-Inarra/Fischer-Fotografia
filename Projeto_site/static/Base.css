@@ -11,6 +11,10 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+#imagemCarrossel1{
+    object-position: 0% 0%;
+}
+
 #ImagemCarrossel2{
     object-position: 0 27%;
 }
