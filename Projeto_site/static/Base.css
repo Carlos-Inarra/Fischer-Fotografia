@@ -606,4 +606,8 @@ section.sobreMim{
         font-size: xx-small;
     }
 
+    footer{
+        margin-top: 150vh;
+    }
+
 }
