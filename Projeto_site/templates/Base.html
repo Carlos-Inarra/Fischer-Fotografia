@@ -7,6 +7,14 @@
         <link rel="stylesheet" href="/static/Base.css">
         <script src="{{ url_for('static', filename='base.js') }}"></script>
         <link rel="shortcut icon" href="/static/Imagens/logo.ico" type="image/x-icon">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEW0WZ1PFS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-VEW0WZ1PFS');
+</script>
     {% block head %}
     {% endblock %}
     </head>
@@ -26,10 +34,10 @@
                 <input type="radio" name="chec" id="check3" class="checks">
                 <input type="radio" name="chec" id="check4" class="checks">
             <div class="Slides">
-                <div class="Slide Ativo" id="Mover"><img id="ImagemCarrossel1" src="/static/Imagens/img2.jpg" alt=""></div>
-                <div class="Slide"><img  id="ImagemCarrossel2" src="/static/Imagens/img3.jpg" alt=""></div>
-                <div class="Slide"><img  id="ImagemCarrossel3" src="/static/Imagens/img4.jpg" alt=""></div>
-                <div class="Slide"><img id="ImagemCarrossel4" src="/static/Imagens/img1.jpg" alt=""></div>
+                <div class="Slide Ativo" id="Mover"><img id="ImagemCarrossel1" src="/static/Imagens/img1.jpg" alt=""></div>
+                <div class="Slide"><img  id="ImagemCarrossel2" src="/static/Imagens/img2.jpg" alt=""></div>
+                <div class="Slide"><img  id="ImagemCarrossel3" src="/static/Imagens/img3.jpg" alt=""></div>
+                <div class="Slide"><img id="ImagemCarrossel4" src="/static/Imagens/img4.jpg" alt=""></div>
                
             </div>
             <div class="Navegacao">
