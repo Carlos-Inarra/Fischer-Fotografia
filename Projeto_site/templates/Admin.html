@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Fischer Fotografia</title>
+    <link rel="stylesheet" href="/static/Admin.css">
+</head>
+<body>
+    <form action="/Admin" method="post" enctype="multipart/form-data">
+    <div class="AdminCarrossel">
+        <div class="Carrossel">
+            <input type="file" name="Carrossel1" id="IMG1" accept="image/*">
+        </div>
+        <div class="Carrossel">
+            <input type="file" name="Carrossel2" id="IMG2" accept="image/*">
+        </div>
+        <div class="Carrossel">
+            <input type="file" name="Carrossel3" id="IMG3" accept="image/*">
+        </div>
+        <div class="Carrossel">
+            <input type="file" name="Carrossel4" id="IMG4" accept="image/*">
+        </div>
+    </div>
+    <button type="submit">Confirmar Troca de Imagens</button>
+    </form>
+    <span>{{ a }}</span>
+</body>
+</html>

@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body{
+    margin: 0;
+}
+
+
+#flash{
+    content: "| ";
+}
+
+@keyframes avisos{
+     
+    0.1%{
+        margin: 3px 0px 0px 2px
+    }
+    0.2%{
+        margin: 6px 0px 0px 4px
+    }
+    0.3%{
+        margin: 12px 0px 0px 8px
+    }
+    0.4%{
+        margin: 24px 0px 0px 16px
+    }
+    0.5%{
+        margin: 3px 0px 0px 2px
+    }
+
+
+
+    1%{
+        margin: 15px 15px 30px 30px;
+
+    }
+
+    2%{color: #0D6EFD;
+        background-color: #0D6EFD;
+        border:  #0D6EFD solid 3px;
+        border-left: #0D6EFD solid 5px
+
+    }
+
+    50%{
+        color: #0D6EFD;
+    background-color: #0D6EFD;
+    border:  #0D6EFD solid 3px;
+    border-left: #0D6EFD solid 5px;
+
+    }
+
+    75%{
+        color: #0D6EFD;
+    background-color: #0D6EFD;
+    border:  #0D6EFD solid 3px;
+    border-left: #0D6EFD solid 5px;
+    }
+
+    100%{
+        display: none;
+        visibility: hidden;
+        color: #0D6EFD;
+        background-color: #0D6EFD;
+        border:  #0D6EFD solid 3px;
+        border-left: #0D6EFD solid 5px;
+
+    }
+}
+
+
+.lg{
+    max-width: 22%;
+    max-height: 22%;
+
+}
+
+#CC{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    text-transform: none;
+    position: absolute;
+    width: 15vw;
+    margin: 20% 50% 08% 40% ;
+    font-size: 70%;
+    text-decoration: underline;
+}
+
+
+
+#TUDO{
+    background-color: #9f040e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.RIGHT{
+    padding-right: 07%;
+    margin-top: 05%;
+    width: 35vw;
+    height: 70vh;
+    background-color: #ffffff;
+    border-radius: 90% 30% 90% 30%;
+}
+
+#CAMPOS{
+    margin: 02vh 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#Login{
+    background-color: #ffffff;
+    max-width: 35vw;
+    max-height: 65vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 70px 70px 70px 70px;
+    box-shadow:  #9f040e 0px 0px 15px 1px
+}
+
+#Logo{
+    max-width: 75%;
+    margin: 05% 0 05% 0
+}
+
+.LS2{
+    margin-top: 15px;
+}
+
+.promo{
+    margin-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.LS{
+    width: 70%;
+    height: 30vh;
+    background-color: #9f040e;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-indent: 3.5%;
+    font-size: small;
+    box-shadow:  #0D6EFD 2px 2px 5px 0;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: small;
+}
+
+
+.LS:hover{
+    box-shadow: #0D6EFD 2.2px 3px 0 0 ;
+}
+
+.LS:focus-visible{
+    outline: none;
+    box-shadow: #0D6EFD 2.2px 3px 0 0 ;
+  }
+  
+.BTN{
+    max-width: 60px;
+    height: 3.5vh;
+    background-color: #9f040e;
+    margin: 07% 0 08% 50% ;
+    border: None;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+    box-shadow:   #0D6EFD 5px 5px 0 0;
+}
+
+.BTN:hover{
+    
+    box-shadow:   #0D6EFD -0.8px -0.8px 1px 0px
+}
+
+.eu{
+    position: absolute;
+    color: white;
+    box-shadow:#ffffff 2.5px 2.5px 0 0;
+    font-size: 8px;
+    font-weight: bold;
+    margin: 10px 2px 0 10px;
+    background-color: #9f040e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.eu::before{
+    content: "| ";
+    font-size: 10px;
+}
+
+.eu:hover{
+    margin: 20px 2px 0 50px;
+    transform: scale(1.7);
+}
+
+.animated{
+    width: 45%;
+    position: absolute;
+    right: 0;
+    top: 0.7vh;
+}
+
+.SOCIAL{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    height: 100px;
+    bottom: 05%;
+    justify-content: space-around ;
+}
+
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lilita One', cursiva;
+}
+@media screen and (max-width: 900px) { 
+    #Login{ 
+        background-color: #ffffff; 
+        max-width: 70vw; 
+        max-height: 60vh; 
+    }
+
+    #CC{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: #000000;
+        text-transform: none;
+        position: absolute;
+        width: 19vw;
+        margin: 37% 50% 05% 40% ;
+        font-size: 70%;
+        text-decoration: underline;
+    }
+
+    #Logo{ 
+            max-width: 70%; 
+            margin: 05% 0 03% 0 
+    } 
+    
+    .BTN{ 
+        max-width: 20%; 
+    } 
+     
+    .LS{ 
+        width: 65%; 
+        max-height: 50vh; 
+    } 
+    #TUDO{ 
+        background-color: #0D6EFD; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+    } 
+     
+    .animated{ 
+        margin-top: 20px;
+        width: 30%; 
+        position: absolute; 
+        left: 0; 
+        top: 40vh; 
+    }  
+ 
+    .RIGHT{ 
+    margin-top: 10%; 
+    padding-bottom: 30%; 
+    padding-right: 30%; 
+    width: 60vw; 
+    height: 30vh; 
+    background-color: #ffffff; 
+    border-radius: 0px 170% 0px 0px; 
+ 
+         
+    } 
+    .SOCIAL{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: 30vw;
+        height: 100px;
+        bottom: 05%;
+        margin-right: 50%;
+        justify-content: space-between ;
+    }
+    a{
+        margin: 40px 10px 0 10px;
+
+    }
+}
+@media screen and (max-width: 500px) {
+    #Login{
+        background-color: #ffffff;
+        max-width: 80vw;
+        max-height: 60vh;
+        border-radius: 40px 40px 40px 40px;
+    }
+
+    #CC{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: #000000;
+        text-transform: none;
+        position: absolute;
+        width: 30vw;
+        margin: 47% 50% 0% 40% ;
+        font-size: 50%;
+        text-decoration: underline;
+    }
+
+    #CAMPOS{
+        margin: 10vh 0 0 01%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    #Logo{
+            max-width: 70%;
+            margin: 05% 0 03% 0
+    }
+
+    .BTN{
+        max-width: 20%;
+    }
+    
+    .LS{
+        width: 65%;
+        max-height: 50vh;
+    }
+    #TUDO{
+        background-color: #0D6EFD;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .RIGHT{
+    margin-top: 10%;
+    padding-bottom: 33%;
+    padding-right: 80vw;
+    width: 80vw;
+    height: 30vh;
+    background-color: #ffffff;
+    border-radius: 0px 170% 0px 0px;
+
+        
+    }
+
+    .animated{
+        display: none;
+    }
+    a{
+        margin-left: 10px;
+        margin-bottom: 20%;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #5747ff;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Lilita One', cursiva;
+    }
+    
+}
+

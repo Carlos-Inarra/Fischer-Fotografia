@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.AdminCarrossel{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5%;
+    background-color: black;
+    height: 40vh;
+    width: 80vw;
+    border-radius: 20px;
+}
+
+input{
+    margin-left: 1vw;
+    border: none;
+    height: 5vh;
+    width: 50%;
+    outline: none;
+    background-color: #ffffffff;
+    border-radius: 5px;
+    border-left: red 5px solid;
+}
+
+.Carrossel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Carrossel:hover{
+    cursor:pointer;
+}
+
+button{
+    position: absolute;
+    right: 20vw;
+    border: none;
+    width: 25%;
+    height: 25%;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 90%;
+    font-weight: 600;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: brown;
+    color: #ffffffff;
+}
+
+span{
+    background-color: #188e0080;
+    width: auto;
+    height: auto;
+    color: blue;
+}
