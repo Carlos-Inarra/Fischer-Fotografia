@@ -228,9 +228,7 @@ def MapaTestando():
   'Lat': -30.0277},
  {'nome': 'Rondônia',
   'sigla': 'RO',
-  'licenciados': {'Nome': ['Cosmos'],
-   'CNPJ': ['76366673000121'],
-   'Endereco': []},
+  'licenciados': {'Nome': [], 'CNPJ': [], 'Endereco': []},
   'Long': -63.8999,
   'Lat': -8.7608},
  {'nome': 'Roraima',
@@ -331,12 +329,12 @@ def MapaTestando():
   'Lat': -10.2128}]
     tabela = pd.DataFrame(UF)
     tabela["Quant"] = tabela["licenciados"].apply(lambda x: len(x['Nome']))
-    tabela['Clientes'] = tabela['licenciados'].apply(lambda x: str(x['Nome']))
+    tabela['Clientes'] = tabela['licenciados'].apply(lambda x: str(x['Nome']).replace(","," |").replace("'",""))
     import plotly.express as px
     df = tabela
-    fig = px.scatter_geo(df,lon=df["Long"],lat=df["Lat"],color="sigla"
-                    , size="Quant",hover_name="nome",hover_data="Clientes",
-                     projection="robinson",scope="south america",center={"lat":-2.2350,"lon":-36.9253},width=800)
+    fig = px.scatter_geo(df,lon=df["Long"],lat=df["Lat"],color="sigla",size_max=25
+                , size="Quant",hover_name="nome",hover_data={"Lat":False,"Long":False,"Quant":True,"Clientes":True},
+                 projection="robinson",scope="south america",center={"lat":-2.2350,"lon":-36.9253},width=800)
     graph_html = fig.to_html()
     
     # Renderize o template passando o HTML do gráfico
