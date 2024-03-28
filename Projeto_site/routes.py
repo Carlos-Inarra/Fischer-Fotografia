@@ -335,7 +335,7 @@ def MapaTestando():
     fig = px.scatter_geo(df,lon=df["Long"],lat=df["Lat"],color="sigla",size_max=25
                 , size="Quant",hover_name="nome",hover_data={"Lat":False,"Long":False,"Quant":True,"Clientes":True},
                  projection="robinson",scope="south america",center={"lat":-2.2350,"lon":-36.9253})
-    graph_html = fig.to_html(full_html=True)
+    graph_html = fig.to_html(full_html=False,standalone=True)
     
     # Renderize o template passando o HTML do gráfico
     return render_template('index.html', graph_html=graph_html)
