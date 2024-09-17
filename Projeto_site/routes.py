@@ -52,7 +52,7 @@ def Enviar_mensagem(*args: str | None, MSG: str, Teclado: bool = False, ChatId: 
     """Envia uma mensagem para a minha conta utilizando a API oficial do Telegram.
     Caso queira trocar para enviar para outra conta preencha o ChatId."""
     
-    url = f'https://api.telegram.org/bot<YOUR_BOT_TOKEN>/SendMessage'
+    url = f'https://api.telegram.org/bot7362106366:AAHf_K89aRbR0YlEshh194FSj468DB_qeHE/SendMessage'
     
     if Teclado:  # Se for utilizar o teclado padrão
         TextosTeclado = [[{'text': i}] for i in args]
