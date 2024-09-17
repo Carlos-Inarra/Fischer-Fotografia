@@ -1,6 +1,7 @@
 from flask import render_template,url_for,request,redirect,make_response,session
 from Projeto_site import app
 from functools import wraps
+import requests
 
 
 def Logado(funcao_original):
