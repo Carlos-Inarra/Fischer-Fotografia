@@ -82,6 +82,7 @@ def Enviar_mensagem(*args: str | None, MSG: str, Teclado: bool = False, ChatId: 
 @app.route('/Mapatestando',methods=['GET'])
 def MapaTestando():
     Enviar_mensagem("Opção 1", "Opção 2", MSG="Escolha uma opção:", Teclado=False)
+    return "Msg enviada"
 
 
     
