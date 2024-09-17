@@ -18,3 +18,9 @@ tenacity==8.2.3
 tzdata==2024.1
 Werkzeug==3.0.1
 zipp==3.18.1
+urllib3==2.0.3
+zipp==3.18.1
+httpcore==1.0.5
+requests==2.31.0
+httptools==0.6.1
+httpx==0.27.0
