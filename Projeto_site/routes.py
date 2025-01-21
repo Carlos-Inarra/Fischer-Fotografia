@@ -105,10 +105,6 @@ def Enviar_mensagem(*args: str | None, MSG: str, Teclado: bool = False, ChatId: 
         print(a.content)
     except Exception as e:
         print(f"Erro ao enviar a mensagem: {e}")
-    
-from flask import Flask, request
-
-app = Flask(__name__)
 
 @app.route('/EnviarMensagem', methods=['POST'])
 def MapaTestando():
@@ -129,6 +125,12 @@ def MapaTestando():
     # Chama a função para enviar a mensagem
     Enviar_mensagem(*opcoes, MSG=mensagem, Teclado=teclado, ChatId=chat_id, Token=token)
     return {"message": "Mensagem enviada com sucesso."}
+
+    
+from flask import Flask, request
+
+app = Flask(__name__)
+
 
 
 
