@@ -3,6 +3,32 @@ from Projeto_site import app
 from functools import wraps
 import requests
 
+def Enviar_mensagem(*args: str | None,
+                     MSG: str,
+                     Teclado: bool = False,
+                     ChatId: int = 5127620212,
+                     Token: str = '7362106366:AAHf_K89aRbR0YlEshh194FSj468DB_qeHE') -> None:
+    from requests import post
+
+    url = f'https://api.telegram.org/bot{Token}/sendMessage'
+
+    Teclado = {'keyboard': [[{'text': i}] for i in args],
+               'is_persistent': True,
+               'resize_keyboard': True} if Teclado else {'remove_keyboard': True}
+
+    data = {
+        'chat_id': ChatId,
+        'text': MSG,
+        'allow_sending_without_reply': True,
+        'reply_markup': Teclado
+    }
+
+    try:
+        post(url, json=data, timeout=30, verify=False)
+    except Exception as e:
+        print(f"Erro ao enviar mensagem: {e}")
+        post(url, json=data, timeout=30, verify=False)
+
 
 def Logado(funcao_original):
     @wraps(funcao_original)
@@ -80,10 +106,32 @@ def Enviar_mensagem(*args: str | None, MSG: str, Teclado: bool = False, ChatId: 
     except Exception as e:
         print(f"Erro ao enviar a mensagem: {e}")
     
-@app.route('/Mapatestando',methods=['GET'])
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/EnviarMensagem', methods=['POST'])
 def MapaTestando():
-    Enviar_mensagem("Opção 1", "Opção 2", MSG="Escolha uma opção:", Teclado=False)
-    return "Msg enviada"
+    # Obtém os dados da requisição
+    data = request.json
+    
+    # Verifica se todos os campos necessários estão presentes
+    if not data or 'MSG' not in data or 'Teclado' not in data:
+        return {"error": "Campos obrigatórios ausentes. Inclua 'MSG' e 'Teclado'."}, 400
+    
+    # Extrai os dados da requisição
+    mensagem = data.get('MSG', "Mensagem padrão")
+    teclado = data.get('Teclado', False)
+    opcoes = data.get('args', [])
+    chat_id = data.get('ChatId', 5127620212)  # Valor padrão
+    token = data.get('Token', '7362106366:AAHf_K89aRbR0YlEshh194FSj468DB_qeHE')  # Valor padrão
+
+    # Chama a função para enviar a mensagem
+    Enviar_mensagem(*opcoes, MSG=mensagem, Teclado=teclado, ChatId=chat_id, Token=token)
+    return {"message": "Mensagem enviada com sucesso."}
+
+
+
 
 
     
